@@ -1,18 +1,5 @@
-# ROP To The Top
+#!/usr/bin/python
 
-**Category:** Binary Exploitation
-**Points:** 130
-**Description:**
-
-> Rop, rop, rop
-> Rop to the top!
-> Slip and slide and ride that rhythm...
-> 
-> Here's some binary and source. Navigate to /problems/roptothetop/ on the shell server to try your exploit out!
-
-## Write-up
-
-```python
 import gmpy
 import sys
 # Si n est pas de p q , p et q = factordb.com of n
@@ -28,6 +15,5 @@ d = gmpy.invert(e, phi)
 m = pow(c, d, p*q)
 
 print(hex(m)[2:].replace('L','').decode('hex'))
-```
 
 
